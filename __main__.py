@@ -23,7 +23,8 @@ logging.basicConfig(
 
 ##---------- Argument Parser ----------##
 if len(sys.argv) != 2:
-    logging.fatal(TypeError,f"Incorrect number of arguments ({len(sys.argv[1]) -1}/1)")
+    logging.fatal(f"Incorrect number of arguments ({len(sys.argv) -1}/1)\n\
+    Please just provide source folder/file path")
     sys.exit(1)
 
 rootFolderPath = sys.argv[1]
@@ -35,4 +36,4 @@ if os.path.exists(rootFolderPath) and os.access(rootFolderPath,os.R_OK):
         trimFile(rootFolderPath)
     logging.info(f"End of trimming, check if everything went smooth in {rootFolderPath}")
 else:
-    logging.fatal(FileNotFoundError,f"File or Directory not found or access denied at {rootFolderPath}")
+    logging.fatal(f"File or directory not found or access denied at {rootFolderPath}")
