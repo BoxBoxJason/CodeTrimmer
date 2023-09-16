@@ -1,7 +1,7 @@
-# ProjectTrimmer
+# Code Trimmer
 User friendly tool to cleanup your project folders/files.
 
-### Removes trailing whitespaces at the end of every line of your project for increased readability.
+### Removes trailing whitespaces at the end of every line of your code for increased readability.
 You only need to specify the root folder/file to cleanup, the program will explore everything below recursively.<br/>
 Requires only one argument: the path (absolute or relative) to source folder/file that needs to be trimmed.
 
